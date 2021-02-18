@@ -27,7 +27,7 @@ double argument()
 		{
 			cin.clear();
 			cin.ignore(32676, '\n');
-			cout << "Не коректный ввод, повторите ввод "<< endl;
+			cout << "Не коректный ввод, повторите ввод " << endl;
 		}
 		else
 		{
@@ -38,17 +38,18 @@ double argument()
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
+	setlocale(LC_ALL, "Ru");
 
-	double x = argument();
 	const int n = 10;
 	int i;
+	double  x = argument();
+	double chislo = 1 + x;
 	double summa = 0;
 
-	for (i = 1; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
-		summa += (pow(-1, n) * pow(x, 2 * n + 1)) / (2 * n + 1);
+		summa += ((pow(-1, i) * pow(x, 2 * i + 1)) / (2 * i + 1));
+		//cout << " Шаг " << i << "   Ln =" << summa << endl; эта строка для того чтобы проверить на определённых шагах работу программу
 	}
-	cout << "ln(1 +" <<x<< ") ="<< summa <<endl;
+	cout << "Значение ln( " << chislo << ") =" << summa << endl;
 }
-
