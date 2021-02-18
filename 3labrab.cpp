@@ -17,7 +17,7 @@ void int_matrix()
 {
 	const int n = 3;
 	long int a[n][n];
-
+	srand(time(0));
 
 	for (int i = 1; i < n + 1; i++)
 	{
@@ -34,8 +34,7 @@ void int_matrix()
 			cout << a[i][j] << "\t";
 		}
 		cout << endl;
-	}
-	srand(time(0));
+	}	
 }
 
 int main()
@@ -50,5 +49,4 @@ int main()
 	d = a[1][3] * ((a[2][1] * a[3][2]) - (a[2][2] * a[3][1]));
 	opredelitel = b - c + d;
 	cout << opredelitel;
-
 }
