@@ -20,15 +20,17 @@ double check_height()
 		cout << "Введите высоту в метрах : ";
 		int height;
 		cin >> height;
-		if (cin.fail())
+
+		if ((cin.fail()) || (height < 0))
 		{
 			cin.clear();
-			cin.ignore(10, '\n');
+			cin.ignore(32767, '\n');
 			cout << "Введено не корректное значение, повторите попытку\n";
 		}
-		else			
+		else
+		{
 			return height;
-
+		}
 	}
 }
 
@@ -39,15 +41,18 @@ double check_speed()
 		cout << "Введите скорость в км/ч :";
 		double speed;
 		cin >> speed;
-		if (cin.fail())
+
+		if ((cin.fail()) || ( speed < 0))
 		{
 			cin.clear();
-			cin.ignore(10, '\n');
+			cin.ignore(32767, '\n');
 			cout << "Введено не корректное значение,повторите попытку \n";
 		}
 		else
+		{
 			return speed;
-	}	
+		}
+	}
 }
 
 int main()
@@ -59,5 +64,5 @@ int main()
 	const double g = 10; // Константа свободного падения
 	double time = sqrt((2 * height) / g);
 	double distance = speed * time;
-	cout << "Подлётное расстояние до объекта = " << distance <<" метров"<< endl;
+	cout << "Подлётное расстояние до объекта = " << distance << " метров" << endl;
 }
