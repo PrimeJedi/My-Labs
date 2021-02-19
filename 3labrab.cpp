@@ -49,7 +49,7 @@ int main()
 	int n = 3, m = 3;
 	int matrix[n][m];
 	long long  matrix_chek = get_matrix();
-	long long  matrix_ pr = print_matrix();
+	long long  matrix_pr = print_matrix();
 	int det;
 	int b, c, d;
 	b = matrix[1][1] * ((matrix[2][2] * matrix[3][3]) - (matrix[2][3] * matrix[3][2]));
