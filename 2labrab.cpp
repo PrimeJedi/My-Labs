@@ -20,7 +20,6 @@ double argument()
 	{
 		cout << "Введите значение аргумента  0 < x < 1: ";
 		double x;
-		const int a = 1;
 		cin >> x;
 
 		if ((cin.fail()) || (x <= 0) || (x >= 1))
@@ -42,7 +41,7 @@ int main()
 
 	const int n = 10;
 	int i;
-	double  x = argument();
+	double x = argument();
 	double chislo = 1 + x;
 	double summa = 0;
 
