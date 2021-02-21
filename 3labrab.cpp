@@ -21,9 +21,9 @@ int main()
 	srand(time(NULL));
 
 	int matrix[3][3];
-	for (int i = 1; i < 3 + 1; i++)
+	for (int i = 0; i < 2 + 1; i++)
 	{
-		for (int j = 1; j < 3 + 1; j++)
+		for (int j = 0; j < 2 + 1; j++)
 		{
 			matrix[i][j] = rand() % 10;
 			cout << matrix[i][j] << " ";
@@ -34,9 +34,9 @@ int main()
 	int det;
 	int b, c, d;
 
-	b = matrix[1][1] * ((matrix[2][2] * matrix[3][3]) - (matrix[2][3] * matrix[3][2]));
-	c = matrix[1][2] * ((matrix[2][1] * matrix[3][3]) - (matrix[2][3] * matrix[3][1]));
-	d = matrix[1][3] * ((matrix[2][1] * matrix[3][2]) - (matrix[2][2] * matrix[3][1]));
+	b = matrix[0][0] * ((matrix[1][1] * matrix[2][2]) - (matrix[1][2] * matrix[2][1]));
+	c = matrix[0][1] * ((matrix[1][0] * matrix[2][2]) - (matrix[1][2] * matrix[2][0]));
+	d = matrix[0][2] * ((matrix[1][0] * matrix[2][1]) - (matrix[1][1] * matrix[2][0]));
 	det = b - c + d;
 	cout << "Определитель матрицы =" << det << endl;
 	return 0;
