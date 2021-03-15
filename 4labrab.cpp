@@ -5,7 +5,7 @@
 
 	Task#: 4.5
 
-	Discription: Написать программу, которая вычисляет гиперболический косинус.
+	Discription: Написать программу, которая вычисляет гиперболический косинус
 */
 #include <iostream>
 #include <cmath>
@@ -15,7 +15,7 @@ using namespace std;
 int calculations(int a);
 int value();
 
-int main(){
+int main() {
 
 	setlocale(LC_ALL, "Ru");
 	short x = value();
@@ -23,34 +23,34 @@ int main(){
 	cout << "Гиперболический косинус ch(" << x << ") = " << ch << endl;
 
 }
-int value(){
+int value() {
 
-	while (true){
+	while (true) {
 
 		cout << "Введите x = ";
 		short x;
 		cin >> x;
 
-		if (cin.fail()){
+		if (cin.fail()) {
 
 			cin.clear();
 			cin.ignore(10, '\n');
 			cout << "Введено не корректное значение " << endl;
 		}
-		else{
+		else {
 			return x;
 		}
 	}
 }
 
-int calculations(int a){
+int calculations(int a) {
 
-	double res = 0;
-	const unsigned short n = 2;
+	double res = 1;
+	const unsigned short n = 5;
 
-	for (int i = 0; i < n; i++){
+	for (int i = 0; i < n; i++) {
 
-		 res += (pow(a, 2 * i)) / (2 * i);
+		res += pow(a, 2 * i) / 2 * i;
 	}
 	return res;
 }
