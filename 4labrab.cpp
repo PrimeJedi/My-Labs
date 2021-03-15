@@ -1,3 +1,12 @@
+/*
+	Author: Быков Сергей
+
+	Group:СБС-001-О-01
+
+	Task#: 4.5
+
+	Discription: Написать программу, которая вычисляет гиперболический косинус.
+*/
 #include <iostream>
 #include <cmath>
 
