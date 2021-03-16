@@ -14,6 +14,7 @@ using namespace std;
 
 int calculations(int a);
 int value();
+int factorial(int j);
 
 int main() {
 
@@ -43,14 +44,24 @@ int value() {
 	}
 }
 
-int calculations(int a) {
+int calculations(int a) 
+{
 
 	double res = 1;
 	const unsigned short n = 5;
+	int res_factorial = factorial(n);
 
-	for (int i = 0; i < n; i++) {
-
-		res += pow(a, 2 * i) / 2 * i;
-	}
+	for (int i = 0; i < n; i++) 
+			res += pow(a, 2 * i) / (2 * res_factorial);
 	return res;
+}
+int factorial(int j)
+{
+	j = 5;
+	int factorial = 1;
+	for (int i = 0; i < j; i++)
+	{
+		factorial *= i + 1;
+	}
+	return factorial;
 }
