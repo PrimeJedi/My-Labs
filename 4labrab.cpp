@@ -43,12 +43,11 @@ int value() {
 		}
 	}
 }
-
 int calculations(int a) 
 {
 
 	double res = 1;
-	const unsigned short n = 5;
+	const unsigned short n = 2;
 	int res_factorial = factorial(n);
 
 	for (int i = 0; i < n; i++) 
@@ -58,10 +57,13 @@ int calculations(int a)
 int factorial(int j)
 {
 	j = 5;
-	int factorial = 1;
+	int fact = 1;
 	for (int i = 0; i < j; i++)
 	{
-		factorial *= i + 1;
+		if (i == 0)
+			return 1;
+		else
+			fact = i * factorial(j - 1);		
 	}
-	return factorial;
+	return fact;
 }
