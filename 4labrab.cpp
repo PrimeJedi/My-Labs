@@ -12,14 +12,14 @@
 
 using namespace std;
 
-int calculations(int a);
+double calculations(int x);
 int value();
-int factorial(int j);
+int factorial(int n);
 
 int main() {
 
 	setlocale(LC_ALL, "Ru");
-	short x = value();
+	int x = value();
 	double ch = calculations(x);
 	cout << "Гиперболический косинус ch(" << x << ") = " << ch << endl;
 
@@ -43,15 +43,17 @@ int value() {
 		}
 	}
 }
-int calculations(int a)
+double calculations(int x)
 {
 
-	double res = 1;
+	double res = 0;
 	const unsigned short n = 2;
-	int res_factorial = factorial(2 * n);
+	double res_factorial = factorial(2*n);
 
 	for (int i = 0; i < n; i++)
-		res += pow(a, 2 * i) / res_factorial;
+	{
+		res += pow(x, 2 * i) / res_factorial;
+	}
 	return res;
 }
 int factorial(int n)
