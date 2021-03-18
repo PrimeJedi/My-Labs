@@ -48,16 +48,14 @@ double calculations(int x)
 
 	double res = 0;
 	const unsigned short n = 2;
-	double res_factorial = factorial(2*n);
 
 	for (int i = 0; i < n; i++)
 	{
-		res += pow(x, 2 * i) / res_factorial;
+		res += pow(x, 2 * i) / factorial(2*i);
 	}
 	return res;
 }
 int factorial(int n)
 {
-	if (n == 0) return 1;
-	else return factorial(n - 1) * n;
+	return (n == 0) ? 1 : n * factorial(n - 1);
 }
