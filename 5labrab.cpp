@@ -1,3 +1,12 @@
+/*
+	Author: Быков Сергей
+
+	Group:СБС-001-О-01
+
+	Task#: 5.5
+
+	Discription: Написать программу, которая выводит строку в обратном порядке
+*/
 #include <iostream>
 #include <string>
 
