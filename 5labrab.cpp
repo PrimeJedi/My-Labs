@@ -1,26 +1,19 @@
- /*
-	Author: Быков Сергей
-
-	Group:СБС-001-О-01
-
-	Task#: 5.5
-
-	Discription: Написать программу, которая выводит строку задом на перёд.
-*/
 
 #include <iostream>
-#include <cstring>
+#include <string>
+
+using namespace std;
 
 int main()
 {
-    const int n = 20;
-    char str[n];
-    std::cout << "Enter your word: ";
-    std::cin.getline(str, n);
+	cout << "Enter your word:";
+	string word;
+	char str;
+	getline(cin, word);
 
-    for (int i = n - 1; i >= 0; i--)
-    {
-        std::cout << str[i];
-    }
-    std::cout << "\n";
+	for (size_t i = 0, e = word.size(); i != e; i++)
+	{			
+		cout <<word[word.size() - i];
+	}
+	cout << endl;
 }
